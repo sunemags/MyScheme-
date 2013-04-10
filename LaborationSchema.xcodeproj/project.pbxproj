@@ -10,6 +10,10 @@
 		5431EE391712AED7006C190C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5431EE381712AED7006C190C /* Foundation.framework */; };
 		5431EE3C1712AED7006C190C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431EE3B1712AED7006C190C /* main.m */; };
 		5431EE401712AED7006C190C /* LaborationSchema.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5431EE3F1712AED7006C190C /* LaborationSchema.1 */; };
+		5431EE481712D6B2006C190C /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431EE471712D6B2006C190C /* Student.m */; };
+		5431EE4B1712DCC5006C190C /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431EE4A1712DCC5006C190C /* Course.m */; };
+		5431EE4E1713FD30006C190C /* StudentService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431EE4D1713FD30006C190C /* StudentService.m */; };
+		5431EE51171421B1006C190C /* Scheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431EE50171421B1006C190C /* Scheme.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +35,14 @@
 		5431EE3B1712AED7006C190C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5431EE3E1712AED7006C190C /* LaborationSchema-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LaborationSchema-Prefix.pch"; sourceTree = "<group>"; };
 		5431EE3F1712AED7006C190C /* LaborationSchema.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = LaborationSchema.1; sourceTree = "<group>"; };
+		5431EE461712D6B2006C190C /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		5431EE471712D6B2006C190C /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		5431EE491712DCC5006C190C /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
+		5431EE4A1712DCC5006C190C /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
+		5431EE4C1713FD30006C190C /* StudentService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentService.h; sourceTree = "<group>"; };
+		5431EE4D1713FD30006C190C /* StudentService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentService.m; sourceTree = "<group>"; };
+		5431EE4F171421B1006C190C /* Scheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scheme.h; sourceTree = "<group>"; };
+		5431EE50171421B1006C190C /* Scheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scheme.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +63,7 @@
 				5431EE3A1712AED7006C190C /* LaborationSchema */,
 				5431EE371712AED7006C190C /* Frameworks */,
 				5431EE361712AED7006C190C /* Products */,
+				5431EE3D1712AED7006C190C /* Supporting Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,8 +87,14 @@
 			isa = PBXGroup;
 			children = (
 				5431EE3B1712AED7006C190C /* main.m */,
-				5431EE3F1712AED7006C190C /* LaborationSchema.1 */,
-				5431EE3D1712AED7006C190C /* Supporting Files */,
+				5431EE461712D6B2006C190C /* Student.h */,
+				5431EE471712D6B2006C190C /* Student.m */,
+				5431EE491712DCC5006C190C /* Course.h */,
+				5431EE4A1712DCC5006C190C /* Course.m */,
+				5431EE4C1713FD30006C190C /* StudentService.h */,
+				5431EE4D1713FD30006C190C /* StudentService.m */,
+				5431EE4F171421B1006C190C /* Scheme.h */,
+				5431EE50171421B1006C190C /* Scheme.m */,
 			);
 			path = LaborationSchema;
 			sourceTree = "<group>";
@@ -83,9 +102,11 @@
 		5431EE3D1712AED7006C190C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5431EE3F1712AED7006C190C /* LaborationSchema.1 */,
 				5431EE3E1712AED7006C190C /* LaborationSchema-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = LaborationSchema;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +161,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5431EE3C1712AED7006C190C /* main.m in Sources */,
+				5431EE481712D6B2006C190C /* Student.m in Sources */,
+				5431EE4B1712DCC5006C190C /* Course.m in Sources */,
+				5431EE4E1713FD30006C190C /* StudentService.m in Sources */,
+				5431EE51171421B1006C190C /* Scheme.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
