@@ -12,15 +12,35 @@
 
 - (id)init
 {
-    return [self initWithUsername:@"" password:@""];
+    return [self initWithUserName:@"" password:@""];
 }
-- (id)initWithUsername:(NSString *)userName password:(NSString *)password
+
+- (id)initWithUserName:(NSString *)userName
+              password:(NSString *)password
 {
     self = [super init];
+    
     if (self) {
-        self.userName = userName;
-        self.password = password;
+        if(self) {
+            self.userName = userName;
+            self.password = password;
+        }
     }
     return self;
 }
+
+-(BOOL)messageToStudent:(Student *)student message:(NSString *)message
+{
+    NSLog(@"Message has now been sent to student %@ %@.", student.firstName, student.lastName);
+    [student messageFromAdmin:message];
+    return YES;
+}
+
+//-(BOOL)messageToAllStudents:(NSDictionary *)students message:(NSString *)message
+//{
+//    for(Student *student in students){
+//        [student messageFromAdmin:message];
+//    }
+//    return YES;
+//}
 @end

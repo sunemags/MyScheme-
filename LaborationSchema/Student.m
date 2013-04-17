@@ -10,17 +10,18 @@
 
 @implementation Student
 
-- (id)init
+-(id)init
 {
-    
     return [self initWithLastName:@"" firstName:@"" course:@""];
 }
 
--(id)initWithLastName:(NSString *)lastName firstName:(NSString *)firstName course:(NSString*) course
+-(id)initWithLastName:(NSString *) lastName
+            firstName:(NSString *) firstName
+               course:(NSString *) course
 {
     self = [super init];
     
-    if (self){
+    if (self) {
         self.lastName = lastName;
         self.firstName = firstName;
         self.course = course;
@@ -29,32 +30,29 @@
     return self;
 }
 
-- (NSUInteger)hash
+-(NSUInteger)hash
 {
     return 37 * [self.studentId hash];
 }
 
-//-(BOOL)dayScheme
-//{
-//    return YES;
-//}
-//
-//-(BOOL)weekScheme
-//{
-//    return YES;
-//}
-
--(BOOL)dayTasks
+-(BOOL)logStudent
 {
-    NSLog(@"\nTjenare %@ %@, idag ska du läsa %@", self.firstName, self.lastName, self.course);
+    NSLog(@"Student %@ %@ ID:[%@]", self.firstName, self.lastName, self.studentId);
     return YES;
 }
 
-//-(BOOL)weekTasks
-//{
-//    return YES;
-//}
-//
+
+-(BOOL)dayAssignment
+{
+    NSLog(@"You have a new %@-assignment.", self.course);
+    return YES;
+}
+
+-(void)messageFromAdmin:(NSString *)message
+{
+    NSString *adminMessage = message;
+    NSLog(@"%@ du har ett nytt meddelande: %@", self.firstName, adminMessage);
+}
 
 
 

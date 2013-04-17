@@ -15,75 +15,127 @@
 int main(int argc, const char * argv[])
 {
 
+    
     @autoreleasepool {
         
-//        Student *student1 = [[Student alloc] initWithLastName:@"Bergkvist" firstName:@"Kristoffer" course:@"Appdevoloping"];
+        ///////////////////////////////////////////// Init of Admin //////////////////////////////////////////////
+        
+        Admin *admin = [[Admin alloc] initWithUserName:@"admin"
+                                              password:@"Secret-Baoz-Password"];
         
         
+        ////////////////////////////////// Init of Students in StudentService ///////////////////////////////////
         
-         
+        Student *student1 = [[Student alloc] initWithLastName:@"Hagfeldt"
+                                                    firstName:@"Jens"
+                                                       course:@"appdev"];
         
+        Student *student2 = [[Student alloc] initWithLastName:@"Bergkvist"
+                                                    firstName:@"Kristoffer"
+                                                       course:@"english"];
         
-        Admin *admin;
-        Admin *regular;
-        
-        admin = [Admin alloc];
-        regular = [Admin alloc];
-        admin = [admin initWithUsername:@"I´m Admin and I´m the GOD"
-                               password:@"secret as hell"];
-        regular = [regular initWithUsername:@"regular-user"
-                                   password:@"easy password"];
-        
-        NSLog(@"%@", [admin userName]);
-        NSLog(@"%@", [regular userName]);
-        
-        
-        
-        
-        // [(
-        Student *student2 = [[Student alloc] initWithLastName:@"Hagfelt" firstName:@"Jens" course:@"Mattematik"];
+        Student *student3 = [[Student alloc] initWithLastName:@"Sjöstrand Gereholt"
+                                                    firstName:@"Amelie"
+                                                       course:@"math"];
         
         StudentService *students = [[StudentService alloc] init];
+        
+        [students addStudent:student1];
         [students addStudent:student2];
+        [students addStudent:student3];
         
         
-        Lesson *english1 = [Lesson alloc] initWithLesson:@"english1"
-    lessonDay:@"monday"
-    teacher:@"Tom"
-    startTime:@"8:00"
-    endTime:@"13:00"
-    classroom:@"Sal 55"
+        //////////////////////////////////////////// Init of Courses /////////////////////////////////////////////
+        
+        //        Course *Appdev = [[Course alloc] initWithCourseName:@"appdev"];
+        //
+        //        Course *Math = [[Course alloc] initWithCourseName:@"math"];
+        //
+        //        Course *English = [[Course alloc] initWithCourseName:@"english"];
+        //
+        //
+        //        CourseService *courses = [[CourseService alloc] init];
+        //
+        //        [courses addCourse:Appdev];
+        //        [courses addCourse:Math];
+        //        [courses addCourse:English];
         
         
+        //////////////////////////////////////////// Init of Lessons /////////////////////////////////////////////
         
-//        
-//        Course *course1 = [[Course alloc] setUpStudentWithCourse:student2 :course1 assignment:@"Läs kapitel 3-6 och göra uppgifterna (a-c)"];
-//        
-//        
-//        
-//        // )];
-//        NSLog(@"\n<<<---!!!!Högskolansskolaförskolande!!!!--->>>" );
-//    puts("<<<---------------------------LOL---------------------------------------->>");
-//        
-//        
-//        [student2 dayTasks];
-//        
-//        
-//    puts("<<<---------------------------LOL---------------------------------------->>");
-//        
-//        
-//        [course1 writeDayTasks];
-//        
-//        
-//    puts("<<<---------------------------LOL---------------------------------------->>");
-//    }
-//    
-//    
-//    
-//    NSLog(@" ");
+        Lesson *Appdev1 = [[Lesson alloc] initWithLessonName:@"appdev1"
+                                                   classroom:@"sal 32"
+                                                     teacher:@"Tom"
+                                                   lessonDay:@"monday"
+                                                   startTime:@"09.00"
+                                                     endTime:@"10.00"
+                                                  assignment:@"read chapter: Collection classes"];
+        
+        Lesson *Appdev2 = [[Lesson alloc] initWithLessonName:@"appdev2"
+                                                   classroom:@"sal 32"
+                                                     teacher:@"Tom"
+                                                   lessonDay:@"tuesday"
+                                                   startTime:@"09.00"
+                                                     endTime:@"10.00"
+                                                  assignment:@"read chapter: NSURLConnection"];
+        
+        Lesson *Appdev3 = [[Lesson alloc] initWithLessonName:@"appdev3"
+                                                   classroom:@"sal 32"
+                                                     teacher:@"Tom"
+                                                   lessonDay:@"friday"
+                                                   startTime:@"09.00"
+                                                     endTime:@"10.00"
+                                                  assignment:@"read about: GitHub"];
+        
+        //        Lesson *Math = [[Lesson alloc] initWithLessonName:@"math"
+        //                                                classroom:@"sal 41"
+        //                                                  teacher:@"Lennart"
+        //                                                startTime:@"09.00"
+        //                                                  endTime:@"10.00"
+        //                                               assignment:@"read chapter: Addition"];
+        //
+        //        Lesson *English = [[Lesson alloc] initWithLessonName:@"english"
+        //                                                   classroom:@"sal 54"
+        //                                                     teacher:@"Tom"
+        //                                                   startTime:@"09.00"
+        //                                                     endTime:@"10.00"
+        //                                                  assignment:@"read chapter: The ride"];
+        
+        
+        /////////////////////////////////////////////////  Logs //////////////////////////////////////////////////
+        
+        NSLog(@"The %@ has password: [%@]",[admin userName],[admin password]);
+        
+        [admin messageToStudent:student1 message:@"Från och med vecka 15 är vi sal 32."];
+        //[admin messageToAllStudents:students message:@"Skolan stänger nu."];
+        
+        puts("");
+        
+        [student1 logStudent];
+        [student1 dayAssignment];
+        //[English writeMessage];
+        
+        puts("");
+        
+        [student2 logStudent];
+        [student2 dayAssignment];
+        //[Math writeMessage];
+        
+        puts("");
+        
+        [student3 logStudent];
+        [student3 dayAssignment];
+        
+        [Appdev1 writeMessage];
+        [Appdev2 writeMessage];
+        [Appdev3 writeMessage];
+        
+        //puts("\n   removing a student   \n");
+        //
+        //[students removeStudent:student4 withId:@"8110212D-AF76-4945-A321-B21721A82873"];
+        //NSLog(@"Student %@ %@ was removed", student4.firstName, student4.lastName);
+        
     }
-    
-  return 0;
-
+    return 0;
 }
-//
+

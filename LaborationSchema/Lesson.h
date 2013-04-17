@@ -13,6 +13,33 @@
 
 @interface Lesson : NSObject
 
+@property (nonatomic, copy) NSString *lessonName;
+@property (nonatomic, copy) NSString *classroom;
+@property (nonatomic, copy) NSString *teacher;
+@property (nonatomic, copy) NSString *lessonDay;
+@property (nonatomic, copy) NSString *startTime;
+@property (nonatomic, copy) NSString *endTime;
+@property (nonatomic, copy) NSString *assignment;
+
+-(id)initWithLessonName:(NSString *) lessonName
+              classroom:(NSString *) classroom
+                teacher:(NSString *) teacher
+              lessonDay:(NSString *) lessonDay
+              startTime:(NSString *) startTime
+                endTime:(NSString *) endTime
+             assignment:(NSString *) assignment;
+
+// -(BOOL)addLesson:(Student *)student : (Course *)course;
+
+-(BOOL)writeMessage;
+
+
+
+
+
+
+
+
 //
 
 //@property (nonatomic, copy) NSString * lessonName;
@@ -30,21 +57,21 @@
 
 
 
-@property (nonatomic, copy)NSString *lessonName;
-@property (nonatomic, copy)NSString *lessonDay;
-@property (nonatomic, copy)NSString *teacher;
-@property (nonatomic, copy)NSString *startTime;
-@property (nonatomic, copy)NSString *endTime;
-@property (nonatomic, copy)NSString *classroom;
-
-
--(id)initWithLesson:(NSString *) lessonName
-          lessonDay:(NSString *) lessonDay
-            teacher:(NSString *) teacher
-          startTime:(NSString *) startTime
-            endTime:(NSString *) endTime
-          classroom:(NSString *) classroom;
-
+//@property (nonatomic, copy)NSString *lessonName;
+//@property (nonatomic, copy)NSString *lessonDay;
+//@property (nonatomic, copy)NSString *teacher;
+//@property (nonatomic, copy)NSString *startTime;
+//@property (nonatomic, copy)NSString *endTime;
+//@property (nonatomic, copy)NSString *classroom;
+//
+//
+//-(id)initWithLesson:(NSString *) lessonName
+//          lessonDay:(NSString *) lessonDay
+//            teacher:(NSString *) teacher
+//          startTime:(NSString *) startTime
+//            endTime:(NSString *) endTime
+//          classroom:(NSString *) classroom;
+//
 
 //
 //

@@ -14,6 +14,17 @@
 
 
 
+@property (nonatomic, copy) NSDictionary *mondayScheme;
+@property (nonatomic, copy) NSDictionary *tuesdayScheme;
+@property (nonatomic, copy) NSDictionary *wednesdayScheme;
+@property (nonatomic, copy) NSDictionary *thursdayScheme;
+@property (nonatomic, copy) NSDictionary *fridayScheme;
+
+
+
+-(BOOL)addLesson:(Lesson *) lessons;
+-(id)initWithLessons:(NSArray *) lessonsToAdd;
+
 //
 //@property (nonatomic, copy)NSString *courseName;
 //@property (nonatomic, copy)NSString *teacher;
@@ -28,8 +39,6 @@
 //              tasks:(NSString *) assignment;
 
 
--(BOOL)addLesson:(Lesson *) lessons;
--(id)initWithLessons:(NSArray *) lessons;
 //
 //-(BOOL)setUpStudentWithCourse:(Student *) student :(Course *) course :(Lesson *) lesson;
 //

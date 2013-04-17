@@ -11,24 +11,32 @@
 #import "StudentService.h"
 @interface Course : NSObject
 
-@property (nonatomic, copy)NSString *courseName;
-//@property (nonatomic, copy)NSString *teacher;
-//@property (nonatomic, copy)NSString *date;
-//@property (nonatomic, copy)NSString *classroom;
-@property (nonatomic, copy)NSString *assignment;
+
+
+
+@property(nonatomic, copy) NSString *courseName;
+
+-(id)initWithCourseName:(NSString *) courseName;
+
+
+//@property (nonatomic, copy)NSString *courseName;
+////@property (nonatomic, copy)NSString *teacher;
+////@property (nonatomic, copy)NSString *date;
+////@property (nonatomic, copy)NSString *classroom;
+//@property (nonatomic, copy)NSString *assignment;
+////
+////-(id)initWithCourse:(NSString *) courseName
+////            teacher:(NSString *) teacher
+////               date:(NSString *) date
+////          classroom:(NSString *) classroom
+////              assignment:(NSString *) assignment;
 //
-//-(id)initWithCourse:(NSString *) courseName
-//            teacher:(NSString *) teacher
-//               date:(NSString *) date
-//          classroom:(NSString *) classroom
-//              assignment:(NSString *) assignment;
-
--(BOOL)setUpStudentWithCourse:(Student *) student :(Course *) course
-assignment:(NSString *) assignment;
-
-
-//-(BOOL)writeDayScheme;
-//-(BOOL)writeWeekScheme;
--(BOOL)writeDayTasks;
-//-(BOOL)writeWeekTasks;
+//-(BOOL)setUpStudentWithCourse:(Student *) student :(Course *) course
+//assignment:(NSString *) assignment;
+//
+//
+////-(BOOL)writeDayScheme;
+////-(BOOL)writeWeekScheme;
+//-(BOOL)writeDayTasks;
+////-(BOOL)writeWeekTasks;
 @end

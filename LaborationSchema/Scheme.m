@@ -62,7 +62,7 @@ static NSString * const fridayKey = @"friday_key";
     }else if ([lesson.lessonDay isEqualToString:@"friday"]) {
         [lessons[fridayKey] addObject:lesson];
     } else {
-        return nil;
+        return NO;
     }
     return YES;
 }

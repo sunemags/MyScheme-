@@ -12,24 +12,20 @@
 
 @interface Student : NSObject
 
-@property (nonatomic, copy) NSString *firstName;
 @property (nonatomic, copy) NSString *lastName;
+@property (nonatomic, copy) NSString *firstName;
 @property (nonatomic, copy) NSString *course;
 @property (nonatomic, copy, readonly) NSString *studentId;
 
+-(id)initWithLastName:(NSString *) lastName
+            firstName:(NSString *) firstName
+               course:(NSString *) course;
 
-// För att man söker på efternamn först, vanligtvis.
--(id)initWithLastName:(NSString *) lastName firstName:(NSString *) firstName course:(NSString *) course;
+-(BOOL)logStudent;
 
-// Get metoder - hämtar ifrån Course
-//-(BOOL)dayScheme;
-//-(BOOL)weekScheme;
--(BOOL)dayTasks;
+-(BOOL)dayAssignment;
 
--(BOOL)dayLesson;
-//-(BOOL)weekTasks;
-
-
+-(void)messageFromAdmin:(NSString *)message;
 
 
 @end

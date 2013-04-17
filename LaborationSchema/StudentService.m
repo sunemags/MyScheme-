@@ -11,6 +11,8 @@
 
 static NSString * const englishKey = @"english_key";
 static NSString * const swedishKey = @"swedish_key";
+static NSString * const mathKey = @"math_key";
+static NSString * const appdevKey = @"appdev_Key";
 
 @implementation StudentService
 {
@@ -27,7 +29,9 @@ static NSString * const swedishKey = @"swedish_key";
     self = [super init];
     if (self) {
         students = @{englishKey: [[NSMutableSet alloc] init],
-                     swedishKey: [[NSMutableSet alloc] init]};
+                     swedishKey: [[NSMutableSet alloc] init],
+                        mathKey: [[NSMutableSet alloc] init],
+                      appdevKey: [[NSMutableSet alloc] init]};
     }
     return self;
 }
@@ -37,6 +41,12 @@ static NSString * const swedishKey = @"swedish_key";
 {
     if ([student.course isEqualToString:@"english"]) {
         [students[englishKey] addObject:student];
+        
+    }else if ([student.course isEqualToString:@"math"]) {
+        [students[mathKey] addObject:student];
+        
+    }else if ([student.course isEqualToString:@"swedish"]) {
+        [students[swedishKey] addObject:student];
         
     }else{
         [students[swedishKey] addObject:student];
