@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+
+
 @interface Student : NSObject
 
 @property (nonatomic, copy) NSString *firstName;
@@ -20,10 +22,12 @@
 -(id)initWithLastName:(NSString *) lastName firstName:(NSString *) firstName course:(NSString *) course;
 
 // Get metoder - hämtar ifrån Course
--(BOOL)dayScheme;
--(BOOL)weekScheme;
+//-(BOOL)dayScheme;
+//-(BOOL)weekScheme;
 -(BOOL)dayTasks;
--(BOOL)weekTasks;
+
+-(BOOL)dayLesson;
+//-(BOOL)weekTasks;
 
 
 

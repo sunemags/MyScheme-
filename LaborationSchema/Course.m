@@ -10,24 +10,47 @@
 
 @implementation Course
 
-- (id)init
+
+-(BOOL)setUpStudentWithCourse:(Student *)student :(Course *)course
+                   assignment:(NSString *)assignment
+
+
 {
-    return [self initWithCourse:@"" teacher:@"" date:0 classroom:@"" tasks:@""];
-    
-}
-- (id)initWithCourse:(NSString *)courseName teacher:(NSString *)teacher date:(NSDate *)date classroom:(NSString *)classroom tasks:(NSString *)tasks
-{
-    self = [super init];
-    if (self) {
-        self.courseName = courseName;
-        self.teacher = teacher;
-        self.date = date;
-        self.classroom = classroom;
-        self.tasks = tasks;
+    if (student.course == course.courseName) {
+        self.assignment = @"";
+        self.assignment = course.assignment;
+
+
+        //        self.startTime = course.startTime; (date)
+        //        self.endTime = course.endTime; (date)
         
     }
-    return self;
+    //    if (students[student.studentId]) {
+    //        return NO;
+    //    }
+    //    students[student.studentId] = student;
+    return YES;
 }
+
+
+//- (id)init
+//{
+//    return [self initWithCourse:@"" teacher:@"" date:@"" classroom:@"" assignment:@""];
+//    
+//}
+//- (id)initWithCourse:(NSString *)courseName teacher:(NSString *)teacher date:(NSString *)date classroom:(NSString *)classroom assignment:(NSString *)assignment
+//{
+//    self = [super init];
+//    if (self) {
+//        self.courseName = courseName;
+//        self.teacher = teacher;
+//        self.date = date;
+//        self.classroom = classroom;
+//        self.assignment = assignment;
+//        
+//    }
+//    return self;
+//}
 
 //-(BOOL)writeDayScheme
 //{
@@ -41,7 +64,7 @@
 //
 -(BOOL)writeDayTasks
 {
-     NSLog(@"\n I %@, ska du läsa %@ i %@ med %@", self.courseName, self.tasks, self.classroom, self.teacher);
+     NSLog(@"\n  I %@, ska du läsa %@ ",  self.courseName, self.assignment);
     return YES;
 }
 

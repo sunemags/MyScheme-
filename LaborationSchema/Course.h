@@ -8,19 +8,25 @@
 
 #import <Foundation/Foundation.h>
 #import "Student.h"
+#import "StudentService.h"
 @interface Course : NSObject
 
 @property (nonatomic, copy)NSString *courseName;
-@property (nonatomic, copy)NSString *teacher;
-@property (nonatomic, copy)NSDate *date;
-@property (nonatomic, copy)NSString *classroom;
-@property (nonatomic, copy)NSString *tasks;
+//@property (nonatomic, copy)NSString *teacher;
+//@property (nonatomic, copy)NSString *date;
+//@property (nonatomic, copy)NSString *classroom;
+@property (nonatomic, copy)NSString *assignment;
+//
+//-(id)initWithCourse:(NSString *) courseName
+//            teacher:(NSString *) teacher
+//               date:(NSString *) date
+//          classroom:(NSString *) classroom
+//              assignment:(NSString *) assignment;
 
--(id)initWithCourse:(NSString *) courseName
-            teacher:(NSString *) teacher
-               date:(NSDate *) date
-          classroom:(NSString *) classroom
-              tasks:(NSString *) tasks;
+-(BOOL)setUpStudentWithCourse:(Student *) student :(Course *) course
+assignment:(NSString *) assignment;
+
+
 //-(BOOL)writeDayScheme;
 //-(BOOL)writeWeekScheme;
 -(BOOL)writeDayTasks;

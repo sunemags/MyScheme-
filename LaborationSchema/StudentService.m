@@ -7,7 +7,7 @@
 //
 
 #import "StudentService.h"
-#import "Student.h"
+
 
 static NSString * const englishKey = @"english_key";
 static NSString * const swedishKey = @"swedish_key";
@@ -19,7 +19,7 @@ static NSString * const swedishKey = @"swedish_key";
 - (id)init
 {
    // NSMutableDictionary *studens = [[NSMutableDictionary alloc] init];
-    return [self initWithStudents:@""];
+    return [self initWithStudents:@[]];
 }
 
 - (id)initWithStudents:(NSDictionary *)studentsToAdd
@@ -47,12 +47,19 @@ static NSString * const swedishKey = @"swedish_key";
 //    students[student.studentId] = student;
     return YES;
 }
-//
-//-(Student *) deleteStudentWithId:(NSString *) studentId
-//{
-// 
-//
-//}
+
+-(Student *) deleteStudentWithId:(NSString *) student
+{
+    Student *studentTestRemove = [[Student alloc] initWithLastName:@"Matson" firstName:@"Mats" course:@"english"];
+    
+    if ([studentTestRemove.course isEqualToString:@"english"]){
+        [students[englishKey]removeObject:student];
+        return studentTestRemove;
+    }
+    
+    return nil;
+}
+
 //
 //-(Student *) updateStudentWithId:(NSString *) studentId
 //{

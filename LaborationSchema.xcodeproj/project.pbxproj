@@ -14,6 +14,8 @@
 		5431EE4B1712DCC5006C190C /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431EE4A1712DCC5006C190C /* Course.m */; };
 		5431EE4E1713FD30006C190C /* StudentService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431EE4D1713FD30006C190C /* StudentService.m */; };
 		5431EE51171421B1006C190C /* Scheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431EE50171421B1006C190C /* Scheme.m */; };
+		5431EE541716B4C8006C190C /* Lesson.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431EE531716B4C8006C190C /* Lesson.m */; };
+		5431EE571716D5E9006C190C /* Admin.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431EE561716D5E8006C190C /* Admin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +45,10 @@
 		5431EE4D1713FD30006C190C /* StudentService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentService.m; sourceTree = "<group>"; };
 		5431EE4F171421B1006C190C /* Scheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scheme.h; sourceTree = "<group>"; };
 		5431EE50171421B1006C190C /* Scheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scheme.m; sourceTree = "<group>"; };
+		5431EE521716B4C7006C190C /* Lesson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lesson.h; sourceTree = "<group>"; };
+		5431EE531716B4C8006C190C /* Lesson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lesson.m; sourceTree = "<group>"; };
+		5431EE551716D5E8006C190C /* Admin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Admin.h; sourceTree = "<group>"; };
+		5431EE561716D5E8006C190C /* Admin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Admin.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,10 @@
 				5431EE4D1713FD30006C190C /* StudentService.m */,
 				5431EE4F171421B1006C190C /* Scheme.h */,
 				5431EE50171421B1006C190C /* Scheme.m */,
+				5431EE521716B4C7006C190C /* Lesson.h */,
+				5431EE531716B4C8006C190C /* Lesson.m */,
+				5431EE551716D5E8006C190C /* Admin.h */,
+				5431EE561716D5E8006C190C /* Admin.m */,
 			);
 			path = LaborationSchema;
 			sourceTree = "<group>";
@@ -165,6 +175,8 @@
 				5431EE4B1712DCC5006C190C /* Course.m in Sources */,
 				5431EE4E1713FD30006C190C /* StudentService.m in Sources */,
 				5431EE51171421B1006C190C /* Scheme.m in Sources */,
+				5431EE541716B4C8006C190C /* Lesson.m in Sources */,
+				5431EE571716D5E9006C190C /* Admin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +279,7 @@
 				5431EE451712AED7006C190C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
