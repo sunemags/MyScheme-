@@ -21,7 +21,7 @@
 		5431EE79171FE63D006C190C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5431EE5E171FE5E2006C190C /* SenTestingKit.framework */; };
 		5431EE7A171FE63D006C190C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5431EE60171FE5E2006C190C /* Cocoa.framework */; };
 		5431EE80171FE63D006C190C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5431EE7E171FE63D006C190C /* InfoPlist.strings */; };
-		5431EE8A171FE6B2006C190C /* StudentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431EE89171FE6B2006C190C /* StudentTests.m */; };
+		5431EE8B171FFC27006C190C /* StudentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5431EE89171FE6B2006C190C /* StudentTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -342,6 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5431EE8B171FFC27006C190C /* StudentTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +350,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5431EE8A171FE6B2006C190C /* StudentTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
