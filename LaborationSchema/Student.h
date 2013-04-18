@@ -25,7 +25,7 @@
 
 -(BOOL)dayAssignment;
 
--(void)messageFromAdmin:(NSString *)message;
+-(BOOL)messageFromAdmin:(NSString *)message;
 
 
 @end

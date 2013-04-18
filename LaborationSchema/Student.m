@@ -35,6 +35,27 @@
     return 37 * [self.studentId hash];
 }
 
+
+
+-(BOOL)isEqual:(id)other
+{
+    // if other points to self - we are equal
+    if(other == self){
+        return YES;
+    }
+    
+    // if other is not nil AND is member of same class as we (self)
+    if(other && [other isMemberOfClass:[self class]]){
+        // comapre studentId
+        return [[other studentId] isEqualToString:self.studentId];
+    }
+    
+    // we are not equal
+    return NO;
+}
+
+
+
 -(BOOL)logStudent
 {
     NSLog(@"Student %@ %@ ID:[%@]", self.firstName, self.lastName, self.studentId);
@@ -48,10 +69,11 @@
     return YES;
 }
 
--(void)messageFromAdmin:(NSString *)message
+-(BOOL)messageFromAdmin:(NSString *)message
 {
     NSString *adminMessage = message;
     NSLog(@"%@ du har ett nytt meddelande: %@", self.firstName, adminMessage);
+    return YES;
 }
 
 
