@@ -9,10 +9,30 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>LaborationSchemaTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>StudentTest.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>5431EE341712AED7006C190C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5431EE5C171FE5E2006C190C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5431EE77171FE63D006C190C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
